@@ -18,6 +18,7 @@
 # protos are needed in adservice folder for compiling during Docker build.
 # comment
 
+
 mkdir -p proto && \
 cp ../../protos/demo.proto src/main/proto
 
