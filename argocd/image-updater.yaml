@@ -3,14 +3,14 @@ kind: ImageUpdater
 metadata:
   name: boutique-image-updater
   namespace: argocd
+
 spec:
-  namespace: argocd
+  commonUpdateSettings:
+    updateStrategy: latest
+    allowTags: "regexp:^sha-[a-f0-9]{7,40}$"
+
   applicationRefs:
     - namePattern: "boutique-*"
-
-      commonUpdateSettings:
-        updateStrategy: "newest-build"
-        allowTags: "regexp:^sha-[a-f0-9]{7,40}$"
 
       images:
         - alias: adservice
@@ -31,6 +31,9 @@ spec:
         - alias: frontend
           imageName: ghcr.io/jsmaxo/microservices-demo/frontend
 
+        - alias: loadgenerator
+          imageName: ghcr.io/jsmaxo/microservices-demo/loadgenerator
+
         - alias: paymentservice
           imageName: ghcr.io/jsmaxo/microservices-demo/paymentservice
 
@@ -42,7 +45,3 @@ spec:
 
         - alias: shippingservice
           imageName: ghcr.io/jsmaxo/microservices-demo/shippingservice
-
-        - alias: loadgenerator
-          imageName: ghcr.io/jsmaxo/microservices-demo/loadgenerator
-
