@@ -1,6 +1,4 @@
-# Project Introduction
-
-# Intro to Online Boutique App
+# Online Boutique App
 
 This is a type of e-commerce platform, but unlike Amazon-type stores, it focuses on:
 
@@ -111,7 +109,7 @@ They are built using **Microservices Architecture**.
 
 Screenshots:
 
-![image.png](docs/images/Screenshot01.png)
+![image.png](docs/images/frontend1.png)
 
 ---
 
@@ -1027,7 +1025,7 @@ Once you have the images in the github packages, connect them to the repository.
 
 So that it shows up and linked to your repo like this.
 
-![image-magik.png](docs/images/image-magik.png)
+![image-magik.png](docs/images/gitrepo.png)
 
 Go to the image →Package Setting, and give permission to the repo to run action.
 
@@ -1637,8 +1635,6 @@ boutique-image-updater   13s
 Head to ArgoCD UI , and in separte tab run the CI pipeline or trigger it via chnaging the code you should see updated images automaticaaly picked. in ArgoCD
 
 ![image.png](docs/images/image%204.png)
-
-![image.png](docs/images/image%205.png)
 
 Access the website `app.devopsdock.site`
 
